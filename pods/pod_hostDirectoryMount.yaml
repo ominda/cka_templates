@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hostDirMount
+  name: hostdirmount
   labels:
     env: dev
     tier: frontend
