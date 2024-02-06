@@ -10,7 +10,7 @@ spec:
     storage: 10Mi
   accessModes:
     - ReadWriteOnce
-  persistentVolume7ReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Recycle
 
 ---
 apiVersion: v1
