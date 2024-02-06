@@ -9,4 +9,4 @@ spec:
   containers:
     - name: red
       image: redis
-      command: ["sleep 4800"]
+      command: ["sleep", "4800"]
