@@ -19,4 +19,4 @@ spec:
     - name: host-vol
       hostPath:
         path: /data
-        type: Directory
+        type: DirectoryOrCreate
