@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: simple_pod
+  name: simple-pod
   labels:
     env: prod
     tier: frontend
@@ -10,4 +10,3 @@ spec:
     - name: red
       image: redis
       command: ["sleep 4800"]
-      
