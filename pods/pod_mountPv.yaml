@@ -11,6 +11,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
+  hostPath:
+    path: /data
+    type: DirectoryOrCreate
 
 ---
 apiVersion: v1
