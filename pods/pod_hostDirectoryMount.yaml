@@ -10,8 +10,8 @@ spec:
     - name:
       image: nginx
       command:
-        - sleep
-        - 4800
+        - "sleep"
+        - "4800"
       volumeMounts:
         - name: host-vol
           mountPath: /data
