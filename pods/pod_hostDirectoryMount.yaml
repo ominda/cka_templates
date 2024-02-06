@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hostdirmount
+  name: host-dir-mount
   labels:
     env: dev
     tier: frontend
 spec:
   containers:
-    - name:
+    - name: myweb
       image: nginx
       command:
         - "sleep"
