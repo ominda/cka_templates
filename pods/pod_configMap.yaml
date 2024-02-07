@@ -12,7 +12,7 @@ spec:
       command: ["sh", "-c", "sleep 4800"]
       volumeMounts:
         - name: game-mount
-          path: /config
+          mountPath: /config
   volumes:
     - name: game-mount
       configMap:
