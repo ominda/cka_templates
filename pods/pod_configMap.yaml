@@ -11,11 +11,13 @@ spec:
       image: nginx
       command: ["sh", "-c", "sleep 4800"]
       env:
-        - name: PLAYER_LIVES
+        # Define the environment variable
+        - name: PLAYER_INITIAL_LIVES # Notice that the case is different here
+                                     # from the key name in the ConfigMap.
           valueFrom:
             configMapKeyRef:
-              - name: game-demo
-                key: player_initial_lives
+              name: game-demo           # The ConfigMap this value comes from.
+              key: player_initial_lives # The key to fetch.
       volumeMounts:
         - name: game-mount
           mountPath: /config
