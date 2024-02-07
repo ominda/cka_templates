@@ -10,6 +10,12 @@ spec:
     - name: my-game
       image: nginx
       command: ["sh", "-c", "sleep 4800"]
+      env:
+        - name: PLAYER_LIVES
+          valueFrom:
+            configMapKeyRef:
+              - name: game-demo
+                key: player_initial_lives
       volumeMounts:
         - name: game-mount
           mountPath: /config
