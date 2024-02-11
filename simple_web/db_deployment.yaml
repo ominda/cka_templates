@@ -22,5 +22,11 @@ spec:
       containers:
       - image: mysql
         name: db
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: db-creds
+                key: mysql_root_password
         resources: {}
 status: {}
