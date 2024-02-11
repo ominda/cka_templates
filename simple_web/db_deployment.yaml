@@ -3,21 +3,21 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: db
-    env: dev
-    tier: backend
+    app: db-deployment
   name: db-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: db-deployment
+      app: db
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: db-deployment
+        app: db
+        env: dev
+        tier: backend
     spec:
       containers:
       - image: mysql
